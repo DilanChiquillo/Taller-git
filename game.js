@@ -9,6 +9,11 @@ function esNumeroValido(n){
     return typeof n === "number" && n >= 1 && n<= 50;
 }
 
+function mostrarMensajeGanador(numero, intentos) {
+  console.log(`¡Correcto! Adivinaste el número ${numero} en ${intentos} intento(s).`);
+}
+
+
 function jugar(intento) {
   if (!esNumeroValido(intento)){
     console.log("Ingresa un Numero válido entre 1 y 50. ");
@@ -17,8 +22,8 @@ function jugar(intento) {
 
   intentos++;
 
-  if (intento === numeroSecreto) {
-    console.log(`¡Correcto! Adivinaste el número ${numeroSecreto} en ${intentos} intento(s).`);
+    if (intento === numeroSecreto) {
+    mostrarMensajeGanador(numeroSecreto, intentos);
     return;
   }
 
