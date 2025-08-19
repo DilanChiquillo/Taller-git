@@ -1,4 +1,5 @@
-const numeroSecreto = Math.floor(Math.random() * 50) + 1;
+const LIMITE_SUPERIOR = 50;
+const numeroSecreto = Math.floor(Math.random() * LIMITE_SUPERIOR) + 1;
 let intentos = 0;
 let intentoAnterior = null;
 
