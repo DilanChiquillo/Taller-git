@@ -22,23 +22,23 @@ function jugar(intento) {
     return;
   }
 
-  let mensajepista = ""; // cambio nombre de variable 
+  let pista = ""; // cambio nombre de variable 
   if (intentoAnterior === null) {
     const distancia = Math.abs(numeroSecreto - intento);
-    mensajepista = distancia <= 5 ? "¡Caliente!" : " Frío.";
+    pista = distancia <= 5 ? "¡Caliente!" : " Frío.";
   } else {
     const distanciaActual = Math.abs(numeroSecreto - intento);
     const distanciaAnterior = Math.abs(numeroSecreto - intentoAnterior);
 
     if (distanciaActual < distanciaAnterior) {
-      mensajepista = "¡Más caliente!";
+      pista = "¡Más caliente!";
     } else if (distanciaActual > distanciaAnterior) {
-      mensajepista = "Más frío.";
+      pista = "Más frío.";
     } else {
-      mensajepista = "Igual que antes.";
+      pista = "Igual que antes.";
     }
   }
 
-  console.log(`Intento #${intentos}: ${mensajepista}`);
+  console.log(`Intento #${intentos}: ${pista}`);
   intentoAnterior = intento;
 }
